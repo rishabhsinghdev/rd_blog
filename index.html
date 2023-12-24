@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>RishabhDeveloper</title>
+  <link rel="stylesheet" href="./style.css">
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #fff;
+  padding: 20px;
+  min-height: 100vh;
+  max-width: 960px;
+  margin: auto;
+}
+.card {
+  background-color: rgb(240, 240, 240);
+  border-radius: 0.5rem;
+  padding: 70px 80px;
+  margin-bottom: 80px;
+}
+h1,
+h3,
+p {
+  color: #111827;
+}
+h3 {
+  padding-left: 20px;
+  border-left: 3px solid blue;
+}
+.date {
+  font-size: 14px;
+  color: #a9a9a9;
+}
+footer {
+  /*Remove "fixed, left, and bottom" if you want it to scroll naturally to the bottom*/
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  /*-------*/
+  width: 100%;
+  background-color: #fff;
+  cursor: default;
+}
+.inside__footer {
+  border-top: 1px solid lightgray;
+  padding: 20px;
+  max-width: 960px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.copyright {
+  text-align: left;
+  color: #a9a9a9;
+  font-size: 16px;
+  order: 1;
+  margin-bottom: 0;
+}
+.social {
+  order: 2;
+  margin-bottom: 0;
+}
+.icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-left: 20px;
+  fill: darkgray;
+  transition: fill 0.15s, filter 0.15s;
+}
+.icon:first-child {
+  margin-right: 0;
+}
+.facebook:hover {
+  fill: #3b5998;
+}
+.instagram:hover {
+  fill: #dd2a7b;
+}
+.twitter:hover {
+  fill: #1da1f2;
+}
+.icon:active {
+  filter: brightness(70%);
+}
+@media only screen and (max-width: 600px) {
+  .card {
+    padding: 30px;
+    margin-bottom: 106px;
+  }
+  .inside__footer {
+    /*use flex-direction, because if you change it to Block it'll never allow Order to work*/
+    flex-direction: column;
+  }
+  .copyright {
+    font-size: 14px;
+    text-align: center;
+    order: 2;
+    margin-bottom: 4px;
+  }
+  .social {
+    order: 1;
+    margin-bottom: 4px;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+    transition: fill 0s, filter 0s;
+  }
+}
+
+.imagess{
+  width: 100%;
+}
+textarea{
+  width: 100%;
+  border: 2px solid black;
+background-color: whitesmoke;
+height: 300px;
+  
+}
+.javas{
+  font-size: 10px;
+  font-weight: bold;
+  width: 100%;
+  background-color: black;
+  color: white;
+  
+}
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<main>
+  <div class="card">
+    <h1>RishabhDeveloper</h1>
+    <br>
+    <p class="date">Dec 23 | Verified</p>
+    <br>
+    <h3>How to host a node.js project for free without using Vercel, Render, or any third party hosting provider</h3>
+    <br>
+    <p>After searching long on internet, I finally found a way to host node.js file on replit for free. Without any third party hosting provider like Vercel, Render, Deta etc.</p>
+    <br>
+    <p>
+      <h4>Go to your node.js project and enter this block of code.<br> 
+      <img class = "imagess" src = "https://i.postimg.cc/B601qHVw/Screenshot-2023-12-23-19-43-55-02-40deb401b9ffe8e1df2f1cc5ba480b12.jpg"></h4> <br>
+      <div class = "javas">&nbsp;Javascript</div>
+      <textarea readonly>
+        const express = require('express');
+const app = express();
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, 'public'))); // Assumes index.html in "public" folder
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/main.html')); // Directly sends main.html
+});
+
+app.listen(3000, () => console.log('Server listening on port 3000'));
+
+      </textarea>
+    </p>
+    <br>
+ <p>
+      <h4>Create a folder named public and create main.html file inside<br> 
+      <img class = "imagess" src = "https://i.postimg.cc/XJGDbMtg/Screenshot-2023-12-23-19-43-13-60-40deb401b9ffe8e1df2f1cc5ba480b12.jpg"></h4>Simplly put a html file in a folder.
+    </p>
+    <br>
+     <p>
+      <h4>Write main.html code<br> 
+      <img class = "imagess" src = "https://i.postimg.cc/WzSZYzSY/Screenshot-2023-12-23-19-43-37-83-40deb401b9ffe8e1df2f1cc5ba480b12.jpg"></h4> <br>
+      <div class = "javas">&nbsp;html</div>
+      <textarea readonly>
+       <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TITLE</title>
+  </head>
+  <body>
+  
+    <script src="index.js"></script>
+  </body>
+</html>
+
+      </textarea>
+    </p>
+    <p>
+      <h4>Get your project link from replit</h4>
+        <img class = "imagess" src = "https://i.postimg.cc/ZRbK7cgZ/Screenshot-2023-12-23-20-41-56-97-40deb401b9ffe8e1df2f1cc5ba480b12.jpg">
+       In order to get your project link from replit. Enter your project name then your replit username and then repl.co <br><strong style = "font-size: 14px;"> https://{project name}.{replit username}.repl.co </strong></p> <br>
+    <p>
+      <h4>Open cron-job.org and signup<br> 
+      <img class = "imagess" src = "https://i.postimg.cc/3JR0JKt7/Screenshot-2023-12-23-20-32-59-79-40deb401b9ffe8e1df2f1cc5ba480b12.jpg"></h4> <br> Signup on cron-job and create a cron job by using your project link. You can set up time for cron job, usually 5 min is good option for it. </p>
+  </div>
+</main>
+<footer>
+  <div class="inside__footer">
+   <script>
+       
+      </script>
+    </p>
+    <div class="social">
+     
+      <a href="https://www.instagram.com/rishabh_____singh" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon instagram" viewBox="0 0 512 512">
+          <title>Instagram</title>
+          <path d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z" />
+          <path d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z" />
+        </svg></a>
+     
+    </div>
+  </div>
+</footer>
+<!-- partial -->
+  
+</body>
+</html>
